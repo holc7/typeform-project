@@ -1,11 +1,7 @@
-
-
-
-
 body {
-  background: #E4EBF5 !important;
+  background: #e4ebf5 !important;
 
-box-sizing: border-box;
+  box-sizing: border-box;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -13,13 +9,11 @@ box-sizing: border-box;
   padding: 0;
 }
 
-
-.container  {
+.container {
   max-width: 900px !important;
   min-width: 900px !important;
   min-height: 350px;
-  background: #E4EBF5;
-
+  background: #e4ebf5;
 
   width: 100%;
   min-width: 100%;
@@ -27,7 +21,6 @@ box-sizing: border-box;
   text-align: center;
   position: relative;
 }
-
 
 .two-question-container {
   margin-top: 80px !important;
@@ -43,27 +36,50 @@ box-sizing: border-box;
   margin-right: 30px;
 }
 
-.serach-field {
+.search-field {
   margin-left: 30px;
   width: 500px;
 
-  background: #E4EBF5;
+  background: #e4ebf5;
   border: none;
   border-radius: 8px;
   padding: 10px 15px;
   font-size: 16px;
-  box-shadow: 
-  4px 4px 10px #b8b8b8, /* Softer dark shadow on bottom right */
-  -4px -4px 10px #ffffff; /* Softer light shadow on top left */
+  box-shadow: 4px 4px 10px #b8b8b8, -4px -4px 10px #ffffff;
 }
 
-.previous-neuro, .next-neuro {
+.previous-neuro,
+.next-neuro {
   padding: 1rem 3rem !important;
 }
 
 .serach-field:focus {
   outline: none;
-  box-shadow: 
-    inset 4px 4px 10px #b8b8b8, /* Softer dark inset shadow */
-    inset -4px -4px 10px #ffffff; /* Softer light inset shadow */
+  box-shadow: inset 4px 4px 10px #b8b8b8,
+    /* Softer dark inset shadow */ inset -4px -4px 10px #ffffff; /* Softer light inset shadow */
+}
+
+.col-3-none {
+  display: none;
+}
+
+p {
+  text-align: left;
+  margin-left: 30px;
+}
+
+.answer-question-container {
+  width: 50% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+}
+
+.answers-container {
+  display: flex;
+  justify-content: center;
+}
+
+.answer-h2 {
+  display: none !important;
 }
