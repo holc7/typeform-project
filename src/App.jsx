@@ -24,7 +24,7 @@ function App() {
         <Lottie
           animationData={animationData}
           style={{
-            width: "60px",
+            width: "120px",
             marginRight: "300px",
             position: "absolute",
             zIndex: "1000",
