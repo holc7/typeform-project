@@ -20,17 +20,15 @@ function App() {
 
   return (
     <>
-      {animationData && (
-        <Lottie
-          animationData={animationData}
-          style={{
-            width: "120px",
-            marginRight: "300px",
-            position: "absolute",
-            zIndex: "1000",
-          }}
-        />
-      )}
+      <Lottie
+        animationData={animationData}
+        style={{
+          width: "120px",
+          marginRight: "300px",
+          position: "absolute",
+          zIndex: "1000",
+        }}
+      />
       <MainContainer />
     </>
   );
