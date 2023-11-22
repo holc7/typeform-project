@@ -38,7 +38,7 @@ body {
 
 .search-field {
   margin-left: 30px;
-  width: 500px;
+  width: 300px;
 
   background: #e4ebf5;
   border: none;
@@ -53,7 +53,7 @@ body {
   padding: 1rem 3rem !important;
 }
 
-.serach-field:focus {
+.search-field:focus {
   outline: none;
   box-shadow: inset 4px 4px 10px #b8b8b8,
     /* Softer dark inset shadow */ inset -4px -4px 10px #ffffff; /* Softer light inset shadow */
@@ -69,10 +69,10 @@ p {
 }
 
 .answer-question-container {
+  padding: 1rem 1.2rem !important;
   width: 50% !important;
   display: flex;
   flex-direction: column;
-  justify-content: center !important;
 }
 
 .answers-container {
@@ -82,4 +82,15 @@ p {
 
 .answer-h2 {
   display: none !important;
+}
+
+ul {
+  margin-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+.ul-class {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

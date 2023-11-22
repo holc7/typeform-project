@@ -2,6 +2,8 @@ import React from "react";
 import { Divider, IconButton, Card } from "ui-neumorphism";
 import { useState, useEffect } from "react";
 import Answers from "./Answers";
+import Lottie from "lottie-react";
+import cloudAnimation from "../assets/cloud-raining.json";
 
 const SearchField = ({
   setQuestionNumber,
@@ -19,6 +21,9 @@ const SearchField = ({
 
   const handleChangeInput = (e) => {
     setInputField(e.target.value);
+    if (inputField.trim() === "") {
+      alert("Please enter a valid answer!");
+    }
   };
 
   const goToNextQuestion = () => {
@@ -63,6 +68,7 @@ const SearchField = ({
                 type="text"
               />
             </form>
+
             <div className="button-container mt-3 col-2 d-flex">
               <IconButton
                 onClick={goToPreviousQuestion}

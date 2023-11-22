@@ -25,7 +25,11 @@ const HeadingAndQuestion = ({
     <div className="container-1">
       <div className="row">
         <div className="col-12  text-center">
-          <h2>WELCOME TO THE QUESTIONNAIRE</h2>
+          {!showResults ? (
+            <h2>WELCOME TO THE QUESTIONNAIRE</h2>
+          ) : (
+            <h2>CONGRATULATIONS! IT IS SIMPLE!!!!!</h2>
+          )}
         </div>
       </div>
       <div className="two-question-container d-flex  align-items-center">
