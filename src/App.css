@@ -90,7 +90,8 @@ ul {
 }
 
 .ul-class {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+
+  justify-content: space-around;
+  align-items: stretch;
 }

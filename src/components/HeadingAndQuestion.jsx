@@ -18,6 +18,7 @@ const HeadingAndQuestion = ({
   questionNumber,
   setQuestionNumber,
   showResults,
+  animationData,
 }) => {
   const currentQuestion = questions[questionNumber];
 

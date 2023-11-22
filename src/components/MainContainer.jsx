@@ -5,7 +5,7 @@ import { Button, Card } from "ui-neumorphism";
 import { useState } from "react";
 import Answers from "./Answers";
 
-const MainContainer = () => {
+const MainContainer = ({ animationData }) => {
   const [questionNumber, setQuestionNumber] = useState(0);
   const [showResults, setShowResults] = useState(false);
   const [answers, setAnswers] = useState([]);
@@ -49,6 +49,7 @@ const MainContainer = () => {
                 questions={questions}
                 setQuestionNumber={setQuestionNumber}
                 showResults={showResults}
+                animationData={animationData}
               />
               <SearchField
                 setQuestionNumber={setQuestionNumber}

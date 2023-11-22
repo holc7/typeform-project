@@ -14,6 +14,8 @@ const SearchField = ({
   showResults,
   setShowResults,
 }) => {
+  const [animationData, setAnimationData] = useState(null);
+
   const [inputField, setInputField] = useState("");
   useEffect(() => {
     console.log("Updated answers state:", answers);
@@ -21,9 +23,6 @@ const SearchField = ({
 
   const handleChangeInput = (e) => {
     setInputField(e.target.value);
-    if (inputField.trim() === "") {
-      alert("Please enter a valid answer!");
-    }
   };
 
   const goToNextQuestion = () => {
@@ -49,10 +48,19 @@ const SearchField = ({
     }
   };
 
+  useEffect(() => {
+    fetch(
+      "https://lottie.host/1c41a6fb-40d1-47d0-839f-53fb7a2a8c51/713gvZWla4.json"
+    )
+      .then((res) => res.json())
+      .then((data) => setAnimationData(data))
+      .catch((err) => console.log("WHAT HAPPENED????"));
+  }, []);
+
   return (
     <div>
       {showResults ? (
-        <Answers answers={answers} />
+        <Answers answers={answers} animationData={animationData} />
       ) : (
         <div className="full-container d-flex align-items-center">
           <div className="form-container">

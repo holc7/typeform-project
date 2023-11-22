@@ -8,6 +8,7 @@ import Lottie from "lottie-react";
 
 function App() {
   const [animationData, setAnimationData] = useState(null);
+  const [animationData2, setAnimationData2] = useState(null);
 
   useEffect(() => {
     fetch(
@@ -15,6 +16,15 @@ function App() {
     )
       .then((res) => res.json())
       .then((data) => setAnimationData(data))
+      .catch((err) => console.log("WHAT HAPPENED????"));
+  }, []);
+
+  useEffect(() => {
+    fetch(
+      "https://lottie.host/1c41a6fb-40d1-47d0-839f-53fb7a2a8c51/713gvZWla4.json"
+    )
+      .then((res) => res.json())
+      .then((data) => setAnimationData2(data))
       .catch((err) => console.log("WHAT HAPPENED????"));
   }, []);
 
@@ -29,7 +39,14 @@ function App() {
           zIndex: "1000",
         }}
       />
-      <MainContainer />
+      {/* <Lottie
+        animationData={animationData2}
+        style={{ position: "absolute", zIndex: "1000" }}
+      /> */}
+      <MainContainer
+        animationData2={animationData2}
+        animationData={animationData}
+      />
     </>
   );
 }

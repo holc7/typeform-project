@@ -2,16 +2,15 @@ import React from "react";
 import { Card } from "ui-neumorphism";
 import Lottie from "lottie-react";
 
-const Answers = ({ answers }) => {
+const Answers = ({ answers, animationData }) => {
   return (
     <div className="answers-container">
       <Card className="answer-question-container" inset>
         <h2>RESULTS</h2>
         <ul className="ul-class">
           {Object.entries(answers).map(([questionId, answer]) => (
-            <div className="li-container d-flex ">
+            <div key={questionId} className="li-container d-flex ">
               <li
-                key={questionId}
                 style={{
                   textAlign: "left",
                   listStyle: "none",
@@ -23,6 +22,14 @@ const Answers = ({ answers }) => {
             </div>
           ))}
         </ul>
+        <Lottie
+          animationData={animationData}
+          style={{ position: "absolute", top: "-15%", right: "-15%" }}
+        />
+        <Lottie
+          animationData={animationData}
+          style={{ position: "absolute", top: "-15%", left: "-15%" }}
+        />
       </Card>
     </div>
   );
